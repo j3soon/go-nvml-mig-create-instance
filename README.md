@@ -222,7 +222,9 @@ _, ret = gi.CreateComputeInstance(&ciProfileInfo)
   #define NVML_COMPUTE_INSTANCE_ENGINE_PROFILE_COUNT  0x1
   ```
 
-  > Although we currently only have the ability to share GPU engines (Copy Engine (CE), NVENC, NVDEC, NVJPEG, Optical Flow Accelerator (OFA), etc.) between CIs within the same GI, this struct may be extended to support isolating these engines for each CI within the same GI.
+  We can only use `COMPUTE_INSTANCE_ENGINE_PROFILE_SHARED` for the second argument in our example.
+
+  > Although we currently only have the ability to share GPU engines (Copy Engine (CE), NVENC, NVDEC, NVJPEG, Optical Flow Accelerator (OFA), etc.) between CIs within the same GI, this struct may be extended to support isolating these engines for each CI within the same GI in the future.
 
 ## References
 
